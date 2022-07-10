@@ -1,0 +1,50 @@
+@use "../abstracts/index" as *;
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        width: 100% / 12 * $i;
+        @if $i == 6{
+            @include responsive(small){
+                width: 100%;
+            }
+        }
+
+        @if $i == 2{
+            @include responsive(medium){
+                width: 100% / 12 * 4;
+                margin-top: 1rem;
+            }
+            @include responsive(small){
+                width: 100% / 12 * 4;
+                margin-top: 1rem;
+            }
+            @include responsive(xsmall){
+                width: 100% / 12 *6;
+                margin-top: 1rem;
+            }
+        }
+
+        @if $i == 3{
+            @include responsive(small){
+                width: 50% ;
+            }
+            @include responsive(xsmall){
+                width: 100% ;
+                margin: 0 2rem;
+            }
+        }
+
+        @if $i == 4{
+            @include responsive(small){
+                width: 50% ;
+            }
+            @include responsive(xsmall){
+                width: 100% ;
+            }
+        }
+
+    }
+}

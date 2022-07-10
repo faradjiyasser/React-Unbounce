@@ -1,0 +1,178 @@
+@use "../abstracts/index" as *;
+.container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @include responsive(large) {
+        max-width: 100%;
+        padding: 0 5rem;
+    }
+    @include responsive(medium) {
+        max-width: 100%;
+        padding: 0 3rem;
+    }
+    @include responsive(small) {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    @include responsive(xsmall) {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+.pl-15{
+    padding-left: 1.5rem;
+}
+.pr-15{
+    padding-right: 1.5rem;
+}
+
+.ml-15{
+    margin-left: -1.5rem;
+}
+.mr-15{
+    margin-right: -1.5rem;
+}
+.mt-05{
+    margin-top: .5rem;
+}
+.mt-15{
+    margin-top: 1.5rem!important;
+}
+.mt-30{
+    margin-top: 3rem!important;
+}
+.mt-45{
+    margin-top: 4.5rem;
+    @include responsive(medium){
+        margin-top: 3rem;
+    }
+    @include responsive(small){
+        margin-top: 2rem;
+    }
+    @include responsive(xsmall){
+        margin-top: 1rem;
+    }
+}
+.animation{
+    transform: translateY(-10rem) scale(.8);
+    opacity: 0;
+    transition: all .8s linear;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    top: 3rem;
+    left: 0;
+    background-color: $white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .down-arrow{
+        transform: rotate(0);
+        transition: all .25s linear;
+
+  }
+  .up-arrow{
+    transform: rotate(180deg);
+    transition: all .25s linear;
+}
+.bg-dark{
+    background: $dark-grey50;
+}
+
+//NavBar
+.dark-nav{
+    background: $dark-grey50;
+    transition: all .25s linear;
+}
+.light-nav{
+    top: -1rem;
+    background: $white;
+    border-bottom: 0px solid;
+    box-shadow: 0px 0px 10px #8888888a;
+    transition: all .25s linear;
+    li{
+    color: $black!important;
+    }
+    @include responsive(medium){
+        top: -1rem;
+    }
+    @include responsive(small){
+        top: -.5rem;
+    }
+    @include responsive(xsmall){
+        top: -.1rem;
+    }
+}
+
+
+.justify{
+    display: flex;
+    justify-content: center;
+}
+.none{
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+.animate{
+    transform: translateY(-10rem);
+    opacity: 0;
+    transition: all 1s linear;
+}
+.animated{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.searchicon{
+    @include responsive(xsmall){
+        display: none!important;
+    }
+}
+.trial{
+    @include responsive(xsmall){
+        display: none!important;
+    }
+}
+.twitter{
+    &:hover{
+        color: #00acee;
+    }
+}
+.linkedIn{
+    &:hover{
+        color: #0072b1;
+    }
+}
+.insta{
+    &:hover{
+        color: #e72c83;
+    }
+}
+.google{
+    &:hover{
+        color: #4285F4;
+    }
+}
+
+  

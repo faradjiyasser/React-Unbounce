@@ -1,0 +1,89 @@
+@use "../abstracts/index" as *;
+
+.navbar{
+    @include align(flex, center, center, auto, 100%);
+    position: fixed;
+    //max-width: 1920px; 
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+    &__elements{
+        @include align(flex, center, space-between, auto, 100%);
+        &__logo{
+            @include align(flex, center, center, auto, 100%);
+            width: 20rem;
+            height: 3rem;
+            object-fit: cover;
+            cursor: pointer;
+            object-fit: cover;
+            margin: 3rem 0;
+            margin-left: 1.5rem;
+            img{
+                position: relative;
+                width: 100%; 
+                height: auto;
+            }
+            @include responsive(medium){
+                width: 12rem;
+                height: 2.6rem;
+                margin: 2.6rem 0;
+                margin-left: 1.5rem;
+            }
+            @include responsive(small){
+                width: 10rem;
+                height: 2rem;
+                margin: 2rem 0;
+                margin-left: 1.5rem;
+            }
+            @include responsive(xsmall){
+                width: 8rem;
+                height: 1.6rem;
+                margin: 1rem 0;
+                margin-left: 1.5rem;
+            }
+        }
+        &__body{
+            @include align(flex, center, center, auto, 100%);
+            list-style: none;
+            &__li{
+                font-size: 1.8rem;
+                margin: 0rem 1rem;
+                line-height: 2rem;
+                cursor: pointer;
+                text-transform: capitalize;
+                color: $white;
+                @include responsive(medium){
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                }
+            }
+            
+            @include responsive(small){
+                display: none;
+            }
+            @include responsive(xsmall){
+                display: none;
+            }
+        }
+        &__end{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 1rem;
+            &__ele{
+                margin: 0 .4rem;
+                font-size: 1.6rem;
+                cursor: pointer;
+                @include responsive(medium){
+                    font-size: 1.3rem;
+                }
+                @include responsive(small){
+                    font-size: 1.2rem;
+                }
+                @include responsive(xsmall){
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

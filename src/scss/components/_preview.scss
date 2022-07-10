@@ -1,0 +1,103 @@
+@use "../abstracts/index" as * ;
+.preview{
+    width: 100%;
+    padding-bottom: 4rem;
+    background: $dark-grey50;
+    margin-top: 10rem;
+    @include responsive(medium){
+        margin-top: 8rem;
+        padding-bottom: 4;
+    }
+    @include responsive(small){
+        margin-top: 6rem;
+        padding-bottom: 3rem;
+    }
+    @include responsive(xsmall){
+        margin-top: 4rem;
+        padding-bottom: 2rem;
+    } 
+    &__body{
+        width: 90%;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        &__heading{
+            margin-top: 10rem;
+            color: $white;
+            @include responsive(medium){
+                margin-top: 8rem;
+            }
+            @include responsive(small){
+                margin-top: 6rem;
+            }
+            @include responsive(xsmall){
+                margin-top: 4rem;
+            }
+            span{
+                display: flex;
+                width: 5rem;
+                height: 3px;
+                background: $pink;
+            }
+            &__h1{
+                margin-top: 4rem;
+                font-size: 1.6rem;
+                max-width: 70%;
+                line-height: 5rem;
+                h1{
+                    font-weight: 100;
+                }
+                @include responsive(medium){
+                    margin-top: 3rem;
+                    font-size: 1.6rem;
+                    line-height: 4rem;
+                }
+                @include responsive(small){
+                    margin-top: 2.5rem;
+                    font-size: 1.4rem;
+                    line-height: 3.5rem;
+                }
+                @include responsive(xsmall){
+                    margin-top: 2rem;
+                    font-size: 1.2rem;
+                    line-height: 3rem;
+                }
+            }
+            &__p{
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                line-height: 3rem;
+                max-width: 90%;
+                @include responsive(medium){
+                    margin-top: 2rem;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                }
+                @include responsive(small){
+                    margin-top: 1.8rem;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                }
+                @include responsive(xsmall){
+                    margin-top: 1.6rem;
+                    font-size: 1.3rem;
+                    line-height: 2.3rem;
+                }
+            }
+        }
+        &__bottom{
+            margin-top: 4rem;
+            @include responsive(medium){
+                margin-top: 3rem;
+            }
+            @include responsive(small){
+                margin-top: 2.5rem;
+            }
+            @include responsive(xsmall){
+                margin-top: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use "./scss/abstracts/index";
+@use "./scss/base/base";
+@use "./scss/layout/layout";
+@use "./scss/utils/utils";
+@use "./scss/utils/buttons";
+
+//componnents
+@use "./scss/components/header";
+@use "./scss/components/navbar";
+@use "./scss/components/partners";
+@use "./scss/components/landing";
+@use "./scss/components/services";
+@use "./scss/components/preview";
+@use "./scss/components/footer";

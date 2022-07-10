@@ -1,0 +1,324 @@
+@use "../abstracts/index" as *;
+.services{
+    @include align(flex, center, center, null, 100%);
+    margin-top: 10rem;
+    @include responsive(medium){
+        margin-top: 6rem;
+    }
+    @include responsive(small){
+        margin-top: 4rem;
+    }
+    @include responsive(xsmall){
+        margin-top: 2rem;
+    }
+    &__h1{
+        display: flex;
+        justify-content: center;
+        max-width: 70%;
+        text-transform: capitalize;
+        h1{
+            font-size: 4rem;
+            line-height: 5rem;
+            font-weight: 100;
+            text-align: center;
+            @include responsive(medium){
+                font-size: 2.8rem;
+                line-height: 3.6rem;
+            }
+            @include responsive(small){
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+            }
+            @include responsive(xsmall){
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+            }
+        }
+    }
+    &__paragraph{
+        max-width: 80%;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: center;
+        margin-top: 2.4rem;
+        color: $grey;
+        @include responsive(medium){
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            margin-top: 2rem;
+        }
+        @include responsive(small){
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-top: 1.8rem;
+        }
+        @include responsive(xsmall){
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            margin-top: 1.6rem;
+        }
+    }
+    &__card{
+        display: flex;  
+        justify-content: center;
+        width: 100%;
+        margin-top: 10rem;
+        border-top: none;
+        border-right: none;
+        height: 70%;
+        @include responsive(medium){
+            margin-top: 8rem;
+        }
+        @include responsive(small){
+            margin-top: 6rem;
+            height: 75%;
+        }
+        @include responsive(xsmall){
+            margin-top: 6rem;
+            height: 78%;
+        }
+        &__body{
+            width: 80%;
+            padding:0 2rem;
+            padding-left: 10%;
+            cursor: pointer;
+            transition: all .2s linear;
+            box-shadow: -9px 9px 26px -4px rgba(0,0,0,0.44);
+            -webkit-box-shadow: -9px 9px 26px -4px rgba(0,0,0,0.44);
+            -moz-box-shadow: -9px 9px 26px -4px rgba(0,0,0,0.44);
+            border-radius: 1rem;
+            &:hover{
+                transform: scale(1.1);
+            }
+            &__images{
+                width: 90%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: -10rem;
+                overflow: hidden;
+                &__image{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                @include responsive(medium){
+                    top: -8rem;
+                }
+                @include responsive(small){
+                    top: -7rem;
+                }
+                @include responsive(xsmall){
+                    top: -6rem;
+                }
+    
+            }
+            &__title{
+                max-width: 80%;
+                font-size: 2rem;
+                font-weight: 200;
+                position: relative;
+                position: relative;
+                top: -10rem;
+                @include responsive(medium){
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                    top: -8rem;
+                }
+                @include responsive(small){
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    top: -7rem;
+                }
+                @include responsive(xsmall){
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                    top: -6rem;
+                }
+            }
+            &__paragraph{
+                max-width: 90%;
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                margin-top: 1rem;
+                color: $grey;
+                position: relative;
+                top: -10rem;
+                @include responsive(medium){
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    top: -8rem;
+                }
+                @include responsive(small){
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                    top: -7rem;
+                }
+                @include responsive(xsmall){
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    top: -6rem;
+                }
+            } 
+        }
+
+        
+    }
+    &__earnpic{
+        width: 100%;
+        margin-top: 8rem;
+        img{
+            width: 95%;
+            object-fit: cover;
+        }
+        @include responsive(medium){
+            margin-top: 6rem;
+        }
+        @include responsive(small){
+            margin-top: 4rem;
+        }
+        @include responsive(xsmall){
+            margin-top: 2rem;
+        }
+    }
+    &__earnbody{
+        width: 90%;
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include responsive(medium){
+            margin-top: 6rem;
+        }
+        @include responsive(small){
+            margin-top: 4rem;
+        }
+        @include responsive(xsmall){
+            margin-top: 2rem;
+        }
+        &__text{
+            max-width: 95%;
+            font-size: 2.4rem;
+            line-height: 4rem;
+            @include responsive(medium){
+                font-size: 2rem;
+                line-height: 3.6rem;
+            }
+            @include responsive(small){
+                font-size: 1.8rem;
+                line-height: 3.4rem;
+            }
+            @include responsive(xsmall){
+                font-size: 1.6rem;
+                line-height: 3.2rem;
+            }
+        }
+        &__smallText{
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            @include responsive(medium){
+                margin-top: 1.8rem;
+                font-size: 1.3rem;
+            }
+            @include responsive(small){
+                margin-top: 1.6rem;
+                font-size: 1.2rem;
+            }
+            @include responsive(xsmall){
+                margin-top: 1.4rem;
+                font-size: 1.1rem;
+            }
+        }
+        &__logo{
+            width: 10rem;
+            margin-top: 2rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__traffic{
+        margin-top: 10rem;
+        padding-top: 10rem;
+        border-top: 1px solid rgba(255, 90, 63, 0.3);
+        @include responsive(medium){
+            margin-top: 8rem;
+            padding-top: 8rem;
+        }
+        @include responsive(small){
+            margin-top: 6rem;
+            padding-top: 6rem;
+        }
+        @include responsive(xsmall){
+            margin-top: 4rem;
+            padding-top: 4rem;
+        }
+        &__body{
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &__h1{
+                font-size: 2.6rem;
+                h1{
+                    font-weight: 100;
+                }
+                @include responsive(medium){
+                    font-size: 1.8rem;
+                }
+                @include responsive(small){
+                    font-size: 1.6rem;
+                }
+                @include responsive(xsmall){
+                    font-size: 1.4rem;
+                }       
+            }
+            &__p{
+                font-size: 2rem;
+                color: $grey;
+                margin-top: 2rem;
+                @include responsive(medium){
+                    font-size: 1.8rem;
+                    margin-top: 1.4rem;
+                }
+                @include responsive(small){
+                    font-size: 1.6rem;
+                    margin-top: 1.2rem;
+                }
+                @include responsive(xsmall){
+                    font-size: 1.4rem;
+                    margin-top: 1rem;
+                } 
+            }
+            &__link{
+                margin-top: 2rem;
+                font-size: 1.6rem;
+                a{
+                    text-decoration: none;
+                    color: $pink;
+                }
+                @include responsive(medium){
+                    font-size: 1.8rem;
+                    margin-top: 1.4rem;
+                }
+                @include responsive(small){
+                    font-size: 1.6rem;
+                    margin-top: 1.2rem;
+                }
+                @include responsive(xsmall){
+                    font-size: 1.4rem;
+                    margin-top: 1rem;
+                } 
+            }
+        }
+        &__image{
+            width: 95%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
